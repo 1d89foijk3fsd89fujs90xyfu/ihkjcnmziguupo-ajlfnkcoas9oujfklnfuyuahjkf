@@ -19,7 +19,8 @@ class anunciar(commands.Cog):
     @commands.guild_only()
     @commands.command(pass_context=True)
     async def subs(self,ctx):
-        embed=discord.Embed(title="Subs", description=f"O zFayser tem neste momento **{oi}**", color=0xf22b1d)
+        embed=discord.Embed(title="Subs", description=f"O zFayser tem neste momento **{oi}** inscritos", color=0xf22b1d)
+        embed.set_thumbnail(url="https://yt3.ggpht.com/a/AGF-l7_YJkFVm3MY67HZAFXnXFEyJR-sRm7jhHhgxA=s288-c-k-c0xffffffff-no-rj-mo")
         await ctx.send(embed=embed)
         
     @commands.guild_only()

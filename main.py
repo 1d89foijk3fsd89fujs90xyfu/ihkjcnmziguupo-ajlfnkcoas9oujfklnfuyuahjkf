@@ -21,7 +21,7 @@ async def on_ready():
     while True:
         await bot.change_presence(status=None, activity=discord.Game("Canal: zFayser"))
         await asyncio.sleep(30)
-        await bot.change_presence(status=None, activity=discord.Game(f"Somos agora {subs.canal} inscritos!!"))
+        await bot.change_presence(status=None, activity=discord.Game(f"Somos agora {subs.lol} inscritos!!"))
         await asyncio.sleep(30)
 
 if __name__ == "__main__":

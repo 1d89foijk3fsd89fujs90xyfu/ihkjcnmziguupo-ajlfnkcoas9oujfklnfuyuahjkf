@@ -27,9 +27,9 @@ async def on_ready():
     print("Discord.py versao : " + str(discord.__version__))
     print("----------------")
     while True:
-        await bot.change_presence(status=None, activity=discord.Game("Canal: zFayser"))
+        await bot.change_presence(status=None, activity=discord.Game("Increvam-se no canal do meu dono -> zFayser <-"))
         await asyncio.sleep(30)
-        await bot.change_presence(status=None, activity=discord.Game(f"Somos agora {oi} inscritos!!"))
+        await bot.change_presence(status=None, activity=discord.Game(f"Oi agora o meu dono tem {oi} inscritos!!"))
         await asyncio.sleep(30)
                   
 if __name__ == "__main__":

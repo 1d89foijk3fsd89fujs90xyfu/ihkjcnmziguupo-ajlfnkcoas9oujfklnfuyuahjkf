@@ -38,7 +38,7 @@ async def on_ready():
 @bot.command()
 @commands.guild_only()
 @commands.is_owner()
-async def (ctx,cog=None):
+async def recarregar(ctx,cog=None):
     if cog is None:
         return await ctx.send("Mencione umas das extençoes ai em baixo\n\n```yml\nanunciar\n```")
     if cog is not None:

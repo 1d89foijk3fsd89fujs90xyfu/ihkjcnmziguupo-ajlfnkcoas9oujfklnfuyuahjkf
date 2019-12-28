@@ -2,6 +2,7 @@ import discord
 from discord.ext import commands
 import os
 import requests
+import urllib.request
 import json
 import asyncio
 
@@ -9,9 +10,8 @@ bot = commands.Bot(command_prefix='?', status=discord.Status.idle, activity=disc
 
 channel_id = "UCJnYvI7s9PwirJSU0okv8JA"
 api_key = os.environ["API_KEY"]
-lol = requests.get(f"https://www.googleapis.com/youtube/v3/channels?part=statistics&id={channel_id}&key={api_key}")
-d = json.loads(lol)
-oi = d["items"]["subscriberCount"]
+data = urllib.request.urlopen(f"https://www.googleapis.com/youtube/v3/channels?channels?part=statistics&id={channel_id}&key={api_key}).read()
+oi = json.loads(data)["items"][0]["statistics"]["subscriberCount"]
 
 startup_extensions = ["anunciar"]
 TOKEN = os.environ["ACCESS_TOKEN"]

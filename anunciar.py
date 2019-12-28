@@ -11,7 +11,7 @@ class anunciar(commands.Cog):
     @commands.guild_only()
     @commands.group(pass_context=True)
     async def subs(self,ctx):
-        embed=discord.Embed(title="Subs", description=f"O zFayser tem neste momento **{subs.canal}**", color=0xf22b1d)
+        embed=discord.Embed(title="Subs", description=f"O zFayser tem neste momento **{subs.lol}**", color=0xf22b1d)
         await ctx.send(embed=embed)
         
     @commands.guild_only()

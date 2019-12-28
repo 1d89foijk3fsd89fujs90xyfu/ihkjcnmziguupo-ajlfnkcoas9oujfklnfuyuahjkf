@@ -13,7 +13,7 @@ lol = requests.get(f"https://www.googleapis.com/youtube/v3/channels?part=statist
 d = json.loads(lol)
 oi = d["items"]["subscriberCount"]
 
-startup_extensions = ["anunciar", "subs"]
+startup_extensions = ["anunciar"]
 TOKEN = os.environ["ACCESS_TOKEN"]
 
 @bot.event

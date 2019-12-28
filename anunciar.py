@@ -2,11 +2,18 @@ import discord
 import random
 from discord.ext import commands
 import asyncio
+import subs
 
 class anunciar(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
+    @commands.guild_only()
+    @commands.group(pass_context=True)
+    async def subs(self,ctx):
+        embed=discord.Embed(title="Subs", description=f"O zFayser tem neste momento **{subs.canal}**", color=0xf22b1d)
+        await ctx.send(embed=embed)
+        
     @commands.guild_only()
     @commands.group(pass_context=True)
     async def anunciar(self,ctx):

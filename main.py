@@ -3,9 +3,14 @@ from discord.ext import commands
 import os
 import json
 import asyncio
-import subs
 
 bot = commands.Bot(command_prefix='?', status=discord.Status.idle, activity=discord.Game("Ligando o bot"))
+
+channel_id = "UCJnYvI7s9PwirJSU0okv8JA"
+api_key = os.environ["API_KEY"]
+lol = requests.get(f"https://www.googleapis.com/youtube/v3/channels?part=statistics&id={channel_id}&key={api_key}")
+d = json.loads(lol)
+oi = d["items"]["subscriberCount"]
 
 startup_extensions = ["anunciar", "subs"]
 TOKEN = os.environ["ACCESS_TOKEN"]
@@ -21,7 +26,7 @@ async def on_ready():
     while True:
         await bot.change_presence(status=None, activity=discord.Game("Canal: zFayser"))
         await asyncio.sleep(30)
-        await bot.change_presence(status=None, activity=discord.Game(f"Somos agora {subs.lol} inscritos!!"))
+        await bot.change_presence(status=None, activity=discord.Game(f"Somos agora {oi} inscritos!!"))
         await asyncio.sleep(30)
 
 if __name__ == "__main__":

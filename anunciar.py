@@ -45,6 +45,7 @@ class anunciar(commands.Cog):
                     a.append(member.id)
                     b = random.choice(a)
                     user = self.bot.get_user(b)
+                    rerettr = print(user)
                     if user.bot is True:
                         a.remove(b)
                     if user.bot is False:

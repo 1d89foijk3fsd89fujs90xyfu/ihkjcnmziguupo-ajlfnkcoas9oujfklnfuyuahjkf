@@ -50,7 +50,7 @@ class anunciar(commands.Cog):
                         a.remove(b)
                     if user.bot is False:
                         try:
-                            await user.send(f"`🎉Anuncio de {pessoas}🎉`\n\n{msg}")
+                            await user.send(f"`🎉Anuncio de {pessoas}🎉`\n\n{msg}\n")
                             kkk = f"Foi enviada messagem para {user.name}"
                             lixo = await ctx.send(kkk)
                             await asyncio.sleep(1)

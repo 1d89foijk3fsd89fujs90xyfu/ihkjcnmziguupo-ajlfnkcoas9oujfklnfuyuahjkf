@@ -9,5 +9,5 @@ def canal():
     lol = requests.get(f"https://www.googleapis.com/youtube/v3/channels?part=statistics&id={channel_id}&key={api_key}")
     d = json.loads(lol)
     oi = d["items"]["subscriberCount"]
+    po = lol.clear()
     re = lol.append(oi)
-    return oi

@@ -3,6 +3,7 @@ from discord.ext import commands
 import os
 import json
 import asyncio
+import subs
 
 bot = commands.Bot(command_prefix='?', status=discord.Status.idle, activity=discord.Game("Ligando o bot"))
 
@@ -19,8 +20,8 @@ async def on_ready():
     print("----------------")
     while True:
         await bot.change_presence(status=None, activity=discord.Game("Canal: zFayser"))
-        await asyncio.sleep(10)
-        await bot.change_presence(status=None, activity=discord.Game(f"Somos agora {subs} | "))
+        await asyncio.sleep(30)
+        await bot.change_presence(status=None, activity=discord.Game(f"Somos agora {subs.canal} inscritos!!"))
 
 if __name__ == "__main__":
     for extension in startup_extensions:

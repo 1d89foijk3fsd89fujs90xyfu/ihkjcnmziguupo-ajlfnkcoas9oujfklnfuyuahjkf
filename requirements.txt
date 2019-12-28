@@ -1,6 +1,5 @@
 
 discord.py
 requests
-urllib
-urlib
+flask
 asyncio

@@ -2,7 +2,12 @@ import discord
 import random
 from discord.ext import commands
 import asyncio
-import subs
+
+channel_id = "UCJnYvI7s9PwirJSU0okv8JA"
+api_key = os.environ["API_KEY"]
+lol = requests.get(f"https://www.googleapis.com/youtube/v3/channels?part=statistics&id={channel_id}&key={api_key}")
+d = json.loads(lol)
+oi = d["items"]["subscriberCount"]
 
 class anunciar(commands.Cog):
     def __init__(self, bot):
@@ -11,7 +16,7 @@ class anunciar(commands.Cog):
     @commands.guild_only()
     @commands.group(pass_context=True)
     async def subs(self,ctx):
-        embed=discord.Embed(title="Subs", description=f"O zFayser tem neste momento **{subs.lol}**", color=0xf22b1d)
+        embed=discord.Embed(title="Subs", description=f"O zFayser tem neste momento **{oi}**", color=0xf22b1d)
         await ctx.send(embed=embed)
         
     @commands.guild_only()

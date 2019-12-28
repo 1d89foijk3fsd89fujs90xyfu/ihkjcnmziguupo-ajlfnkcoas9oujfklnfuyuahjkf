@@ -9,6 +9,7 @@ import pymongo
 from pymongo import MongoClient
 
 bot = commands.Bot(command_prefix='?', status=discord.Status.idle, activity=discord.Game("Ligando o bot"))
+bot.remove_command("help")
 
 channel_id = "UCJnYvI7s9PwirJSU0okv8JA"
 key = os.environ["API_KEY"]

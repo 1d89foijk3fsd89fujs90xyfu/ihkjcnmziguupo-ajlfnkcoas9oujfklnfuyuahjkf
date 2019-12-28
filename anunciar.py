@@ -11,8 +11,9 @@ class anunciar(commands.Cog):
     @commands.group(pass_context=True)
     async def anunciar(self,ctx):
         if not ctx.author.guild_permissions.manage_guild:
-            embed=discord.Embed(title="🚫Sem permissoes🚫", description="**Sabia que - só as pessoas que tem permissoes `manage_guild` tem asseso ao comando?\nE você não tem essa permzinha aí**")
-            await ctx.send(embed=embed)
+            if ctx.invoked_subcommand is None:
+                embed=discord.Embed(title="🚫Sem permissoes🚫", description="**Sabia que - só as pessoas que tem permissoes `manage_guild` tem asseso ao comando?\nE você não tem essa permzinha aí**")
+                await ctx.send(embed=embed)
         if ctx.author.guild_permissions.manage_guild:
             if ctx.invoked_subcommand is None:
                 embed=discord.Embed(title="Anunciar", description="Anuncie qualquer coisa", color=0xffff00)

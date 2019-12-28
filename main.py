@@ -72,7 +72,7 @@ async def meta(ctx,cog=None):
                     embed.description = f"A nova meta é {cog}"
                     await ctx.send(embed=embed)
                 if server is not None:
-                    SeiLA.server.update_one({"_id": 871}, {"$set":{"meta":(cog))}})
+                    SeiLA.server.update_one({"_id": 871}, {"$set":{"meta": str(cog))}})
                     embed=discord.Embed(title="Meta setada", color=COR)
                     embed.description = f"A nova meta é {cog}"
                     await ctx.send(embed=embed) 

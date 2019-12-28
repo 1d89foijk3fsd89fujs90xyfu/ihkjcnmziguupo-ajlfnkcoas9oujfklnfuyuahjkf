@@ -6,7 +6,7 @@ from discord.ext import commands
 import asyncio
 
 channel_id = "UCJnYvI7s9PwirJSU0okv8JA"
-api_key = os.environ["API_KEY"]
+key = os.environ["API_KEY"]
 data = urllib.request.urlopen("https://www.googleapis.com/youtube/v3/channels?part=statistics&id="+channel_id+"&key="+key).read()
 oi = json.loads(data)["items"][0]["statistics"]["subscriberCount"]
 

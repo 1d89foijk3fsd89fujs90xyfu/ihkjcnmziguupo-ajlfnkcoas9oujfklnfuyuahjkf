@@ -1,6 +1,7 @@
 import discord
 import random
 import requests
+import os
 import urllib.request
 from discord.ext import commands
 import asyncio

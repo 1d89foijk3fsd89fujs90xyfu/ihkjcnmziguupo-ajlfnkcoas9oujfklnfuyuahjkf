@@ -10,9 +10,6 @@ from pymongo import MongoClient
 
 bot = commands.Bot(command_prefix='?', status=discord.Status.idle, activity=discord.Game("Ligando o bot"))
 
-admin = 457914780876013569
-COR = 0x34363c
-url = os.environ["LOL"]
 channel_id = "UCJnYvI7s9PwirJSU0okv8JA"
 key = os.environ["API_KEY"]
 data = urllib.request.urlopen("https://www.googleapis.com/youtube/v3/channels?part=statistics&id="+channel_id+"&key="+key).read()

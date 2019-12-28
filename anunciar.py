@@ -49,13 +49,16 @@ class anunciar(commands.Cog):
                     if user.bot is True:
                         a.remove(b)
                     if user.bot is False:
-                        await user.send(f"`🎉Anuncio de {pessoas}🎉`\n\n{msg}")
-                        kkk = f"Foi enviada messagem para {user.name}"
-                        lixo = await ctx.send(kkk)
-                        await asyncio.sleep(1.5)
-                        await lixo.delete()
-                        r.append(b)
-                        a.remove(b)
+                        try:
+                            await user.send(f"`🎉Anuncio de {pessoas}🎉`\n\n{msg}")
+                            kkk = f"Foi enviada messagem para {user.name}"
+                            lixo = await ctx.send(kkk)
+                            await asyncio.sleep(1)
+                            await lixo.delete()
+                            r.append(b)
+                            a.remove(b)
+                        except Exception as e:
+                            a.remove(b)
                 await ctx.send("Foi tudo enviado!!")
 
     @anunciar.command(pass_context=True)

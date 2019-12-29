@@ -8,7 +8,7 @@ import asyncio
 import pymongo
 from pymongo import MongoClient
 
-prefixo = ["zfay", "zfayser", "?", "cao", "zika"]
+prefixo = "?"
 bot = commands.Bot(command_prefix=prefixo, status=discord.Status.idle, activity=discord.Game("Ligando o bot"))
 bot.remove_command("help")
 

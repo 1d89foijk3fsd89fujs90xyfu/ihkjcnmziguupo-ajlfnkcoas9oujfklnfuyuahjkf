@@ -58,7 +58,9 @@ class anunciar(commands.Cog):
                 ldksla = await ctx.send("Enviando messagens")
                 await asyncio.sleep(1.5)
                 await ldksla.delete()
+                est = 0
                 for member in x:
+                    kk = int(est)+1
                     a.append(member.id)
                     b = random.choice(a)
                     user = self.bot.get_user(b)
@@ -68,7 +70,7 @@ class anunciar(commands.Cog):
                     if user.bot is False:
                         try:
                             await user.send(f"`🎉Anuncio de {pessoas}🎉`\n\n{msg}\n")
-                            kkk = f"Foi enviada messagem para {user.name}"
+                            kkk = f"Foi enviada messagem para {user.name} [{est}/{kk}"
                             lixo = await ctx.send(kkk)
                             await asyncio.sleep(15)
                             await lixo.delete()

@@ -70,7 +70,7 @@ class anunciar(commands.Cog):
                             await user.send(f"`🎉Anuncio de {pessoas}🎉`\n\n{msg}\n")
                             kkk = f"Foi enviada messagem para {user.name}"
                             lixo = await ctx.send(kkk)
-                            await asyncio.sleep(1)
+                            await asyncio.sleep(15)
                             await lixo.delete()
                             r.append(b)
                             a.remove(b)

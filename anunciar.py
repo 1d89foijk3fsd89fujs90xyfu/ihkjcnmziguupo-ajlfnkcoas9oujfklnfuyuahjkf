@@ -15,24 +15,6 @@ oi = json.loads(data)["items"][0]["statistics"]["subscriberCount"]
 class anunciar(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
-
-    @commands.guild_only()
-    @commands.command(pass_context=True)
-    async def servidor(self,ctx):
-        resposta = "dinastymc.ml"
-        mcsvrs = requests.get(f'https://eu.mc-api.net/v3/server/ping/{resposta}')
-        mcsvr = json.loads(mcsvrs.text)
-        jogadores = (str(mcsvr["players"]["online"]))
-        versao = (str(mcsvr["version"]["name"]))
-        sts = (str(mcsvr["status"]))
-        img = "https://eu.mc-api.net/v3/server/favicon/dinastymc.ml"
-        embed = discord.Embed(title="Info do Servidor do meu dono", color=0x65ff00)
-        embed.add_field(name='Ip:', value="{}".format(resposta))
-        embed.add_field(name='Online', value="{}".format(sts).replace("True","Sim").replace("False","Não"))
-        embed.add_field(name='Players:', value="{}".format(jogadores))
-        embed.add_field(name='Versao', value="{}".format(versao).replace("Requires",""))
-        embed.set_thumbnail(url=img)
-        await ctx.send(embed=embed)
         
     @commands.guild_only()
     @commands.command(pass_context=True)

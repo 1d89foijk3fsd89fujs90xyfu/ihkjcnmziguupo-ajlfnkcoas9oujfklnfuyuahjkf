@@ -25,7 +25,7 @@ class anunciar(commands.Cog):
         jogadores = (str(mcsvr["players"]["online"]))
         versao = (str(mcsvr["version"]["name"]))
         sts = (str(mcsvr["status"]))
-        img = (str(mcsvr["favicon"]))
+        img = "https://eu.mc-api.net/v3/server/favicon/dinastymc.ml"
         embed = discord.Embed(title="Info do Servidor do meu dono", color=0x65ff00)
         embed.add_field(name='Ip:', value="{}".format(resposta))
         embed.add_field(name='Online', value="{}".format(sts).replace("True","Sim").replace("False","Não"))

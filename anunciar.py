@@ -18,6 +18,14 @@ class anunciar(commands.Cog):
         
     @commands.guild_only()
     @commands.command(pass_context=True)
+    async def ajuda(self,ctx):
+        embed = discord.Embed(description="Oi eu sou o Cachorro Zika o cão do zFayser\nVou dizer o que posso fazer ai em baixo", color=0xf22b1d)
+        embed.add_field(name="?subs", value="Eu digo os subs do meu dono neste exato momento")
+        embed.add_field(name="?anunciar", value="Eu digo os subs do meu dono neste exato momento")
+        await ctx.send(embed=embed)
+    
+    @commands.guild_only()
+    @commands.command(pass_context=True)
     async def subs(self,ctx):
         embed=discord.Embed(title="Subs", description=f"Oi agora o meu dono tem neste momento **{oi}** inscritos", color=0xf22b1d)
         embed.set_thumbnail(url="https://yt3.ggpht.com/a/AGF-l7_YJkFVm3MY67HZAFXnXFEyJR-sRm7jhHhgxA=s288-c-k-c0xffffffff-no-rj-mo")

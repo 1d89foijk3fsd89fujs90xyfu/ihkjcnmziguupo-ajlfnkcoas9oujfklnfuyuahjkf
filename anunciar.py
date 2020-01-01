@@ -21,7 +21,7 @@ class anunciar(commands.Cog):
     async def ajuda(self,ctx):
         embed = discord.Embed(description="Oi eu sou o Cachorro Zika o cão do zFayser\nVou dizer o que posso fazer ai em baixo", color=0xf22b1d)
         embed.add_field(name="?subs", value="Eu digo os subs do meu dono neste exato momento")
-        embed.add_field(name="?anunciar", value="Eu digo os subs do meu dono neste exato momento")
+        embed.add_field(name="?anunciar", value="Este comando e so para anunciar os anuncios importantes do zFayser / Admins")
         await ctx.send(embed=embed)
     
     @commands.guild_only()

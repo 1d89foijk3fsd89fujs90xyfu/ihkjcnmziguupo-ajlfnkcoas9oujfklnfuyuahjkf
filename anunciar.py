@@ -17,7 +17,7 @@ class anunciar(commands.Cog):
         self.bot = bot
         
     @commands.guild_only()
-    @commands.command(pass_context=True)
+    @commands.command(pass_context=True, aliases=['help'])
     async def ajuda(self,ctx):
         embed = discord.Embed(description="Oi eu sou o Cachorro Zika o cão do zFayser\nVou dizer o que posso fazer ai em baixo", color=0xf22b1d)
         embed.add_field(name="?subs", value="Eu digo os subs do meu dono neste exato momento")

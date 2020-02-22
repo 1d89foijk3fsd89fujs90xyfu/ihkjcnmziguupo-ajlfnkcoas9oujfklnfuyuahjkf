@@ -9,7 +9,7 @@ import pymongo
 from pymongo import MongoClient
 
 prefixo = "?"
-bot = commands.Bot(case_insensitive=True, command_prefix=prefixo, status=discord.Status.idle, activity=discord.Game("Ligando o bot"))
+bot = commands.Bot(case_insensitive=True, command_prefix=prefixo, status=discord.Status.idle, activity=discord.Game("Recarregando o bot"))
 bot.remove_command("help")
 
 channel_id = "UCJnYvI7s9PwirJSU0okv8JA"
